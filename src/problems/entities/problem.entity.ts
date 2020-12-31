@@ -12,7 +12,7 @@ export class Problem {
   @Column('int')
   type: number;
 
-  @Column('text')
+  @Column('text', { nullable: true })
   choices: string;
 
   @Column('text')

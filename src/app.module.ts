@@ -9,7 +9,7 @@ import { ProblemsModule } from './problems/problems.module';
     ProblemsModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
-      database: 'math',
+      database: 'math2',
       synchronize: true,
       logging: true,
       entities: [Problem, Result],
