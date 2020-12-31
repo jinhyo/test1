@@ -1,18 +1,19 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { Problems } from './problems/entities/problems.entity';
+import { Problem } from './problems/entities/problem.entity';
+import { Result } from './problems/entities/result.entity';
 import { ProblemsModule } from './problems/problems.module';
 
 @Module({
   imports: [
+    ProblemsModule,
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'math',
       synchronize: true,
       logging: true,
-      entities: [Problems],
+      entities: [Problem, Result],
     }),
-    ProblemsModule,
   ],
   controllers: [],
   providers: [],
