@@ -18,7 +18,6 @@ import Joi from 'joi';
       type: 'sqlite',
       database: process.env.DB_NAME,
       synchronize: true,
-      logging: true,
       entities: [Problem, Result],
     }),
     ProblemsModule,
