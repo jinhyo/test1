@@ -7,6 +7,9 @@ export class Result {
   id: number;
 
   @Column('text')
+  problem_id: string;
+
+  @Column('text')
   answer: string;
 
   @Column('int')
