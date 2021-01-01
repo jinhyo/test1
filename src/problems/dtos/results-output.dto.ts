@@ -1,7 +1,7 @@
 import { PickType } from '@nestjs/mapped-types';
 import { IsArray, IsBoolean, IsNumber, IsString } from 'class-validator';
 
-export class OutputElement {
+class OutputElement {
   @IsNumber()
   readonly id: number;
 

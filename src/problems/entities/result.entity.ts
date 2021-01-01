@@ -1,11 +1,9 @@
+import { StandardEntity } from 'src/commons/entities/standard.entity';
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { Problem } from './problem.entity';
 
 @Entity()
-export class Result {
-  @PrimaryGeneratedColumn()
-  id: number;
-
+export class Result extends StandardEntity {
   @Column('text')
   problem_id: string;
 

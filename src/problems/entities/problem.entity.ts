@@ -1,10 +1,10 @@
 import { IsNumber, IsString } from 'class-validator';
+import { StandardEntity } from 'src/commons/entities/standard.entity';
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
 import { Result } from './result.entity';
 
 @Entity()
-export class Problem {
-  @PrimaryGeneratedColumn()
+export class Problem extends StandardEntity {
   id: number;
 
   @Column('text')

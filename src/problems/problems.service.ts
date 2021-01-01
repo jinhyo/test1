@@ -22,7 +22,7 @@ export class ProblemsService {
     try {
       const count = await this.problemRepos.count();
       if (count === 0) {
-        await this.set();
+        await this.initializeDB();
       }
 
       const problems = await this.problemRepos.find();
@@ -77,7 +77,7 @@ export class ProblemsService {
     }
   }
 
-  private async set() {
+  private async initializeDB() {
     await this.problemRepos.insert(db);
   }
 }
